@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-11T00:00:00Z",
+  "title": "Design System: La Brújula de las HSE",
+  "extensions": {
+    "documentation": {
+      "mode": "scan",
+      "tokenSource": "DESIGN.md frontmatter",
+      "implementationSources": ["styles.css", "interactions.css", "index.html", "app.js"],
+      "contextSources": ["PRODUCT.md", ".impeccable/surface.md", "README.md"],
+      "stylesheetOrder": ["styles.css", "interactions.css"],
+      "sidecarPath": ".impeccable/design-system.json",
+      "referenceDefaultPath": ".impeccable/design.json",
+      "registration": "Registro documental en la ruta elegida durante la implementación, no especificada por el usuario; no se afirma autodetección del panel.",
+      "generatedAtPrecision": "day; midnight is a date marker, not a measured execution time",
+      "tonalRamps": "No se sintetizan rampas: no hay escalas tonales globales declaradas en el código.",
+      "review": "Según el usuario, interior fresh ses_ed3f48f2bffecRmUmGKzotLoBm: fix A/B de foco, ambos resolved; ship. La revisión anterior de portada se conserva como antecedente.",
+      "reportedInteriorReview": {"session": "ses_ed3f48f2bffecRmUmGKzotLoBm", "findings": ["fix A foco SEL secuencial", "fix B foco simulador"], "status": "both resolved", "verdict": "ship", "capturePatterns": [".impeccable/review/sel-{desktop,mobile}.png", ".impeccable/review/world-*.png", ".impeccable/review/simulator-*.png", ".impeccable/review/library-*.png", ".impeccable/review/evidencia-*.png", ".impeccable/review/sel-mobile-sequential*", ".impeccable/review/simulator-keyboard*"], "source": "Revisión y capturas comunicadas por el usuario; no reejecutadas en esta actualización"},
+      "reportedVerification": {"e2eAssertionsPassed": 56, "viewsPassed": 20, "widthsPx": [320, 390, 768, 1440], "pageCount": 5, "keyboardTested": true, "reducedMotionTested": true, "consoleErrors": 0, "source": "Usuario; esta actualización solo valida los documentos y JSON"},
+      "detector": {"mode": "regex degraded", "findings": "Advisories de colores, tipografía y radios del interior no registrados en el DESIGN previo", "resolution": "Valores intencionales extraídos de interactions.css y registrados en esta documentación", "cleanPassClaimed": false, "rerunDuringDocumentation": false},
+      "reportedAssetScan": {"directory": "assets", "rasters": 3, "missing": 0, "newGeneration": false, "source": "Metadatos y reutilización comunicados por el usuario"},
+      "reportedReview": {"session": "ses_ed4190caeffeTOkQdqIuc7ae45", "finding": "fix768", "resolution": "Regla 761–900px con art height 420px, object-fit cover y padding inferior 370px", "verdict": "ship", "status": "resolved", "captures": [".impeccable/review/desktop.png", ".impeccable/review/mobile.png", ".impeccable/review/tablet.png"], "source": "Resultado y capturas comunicados por el usuario; no es una nueva revisión de esta actualización"},
+      "verificationScope": "Extracción de archivos fuente y registros de prompts; sin certificación de accesibilidad ni métricas de rendimiento.",
+      "imagePromptSources": [".impeccable/image-prompts/portada-hse.json", ".impeccable/image-prompts/aula-aprendizaje.json", ".impeccable/image-prompts/liderazgo-colectivo.json"],
+      "activeImagePaths": ["assets/portada-hse.webp", "assets/aula-aprendizaje.webp", "assets/liderazgo-colectivo.webp"],
+      "inactiveCssSelectors": [".hero", ".hero-media", ".hero-image", ".atlas", ".map-node"],
+      "selectorScope": "Selectores heredados sin nodos correspondientes en index.html; no representan la portada actual"
+    },
+    "colorMeta": {
+      "ink": {"role": "primary", "displayName": "Tinta azul profunda", "cssVariable": "--ink"},
+      "teal": {"role": "primary", "displayName": "Verde petróleo", "cssVariable": "--teal"},
+      "blue": {"role": "primary", "displayName": "Azul de interacción", "cssVariable": "--blue"},
+      "yellow": {"role": "secondary", "displayName": "Amarillo ExC", "cssVariable": "--yellow"},
+      "paper": {"role": "neutral", "displayName": "Papel blanco azulado", "cssVariable": "--paper"},
+      "muted": {"role": "neutral", "displayName": "Texto de apoyo", "cssVariable": "--muted"},
+      "line": {"role": "neutral", "displayName": "Línea gris azulada", "cssVariable": "--line"},
+      "white": {"role": "neutral", "displayName": "Blanco", "cssVariable": "--white"},
+      "soft-teal": {"role": "neutral", "displayName": "Verde suave", "cssVariable": "--soft-teal"},
+      "soft-blue": {"role": "neutral", "displayName": "Azul suave", "cssVariable": "--soft-blue"},
+      "primary-hover": {"role": "primary", "displayName": "Hover primario"},
+      "correct-bg": {"displayName": "Fondo de acierto"},
+      "incorrect-border": {"displayName": "Borde de revisión"},
+      "incorrect-bg": {"displayName": "Fondo de revisión"},
+      "retry-text": {"displayName": "Texto de revisión"},
+      "cover-bg": {"role": "primary", "displayName": "Azul de portada"},
+      "cover-hover": {"role": "secondary", "displayName": "Hover del CTA de portada"},
+      "cover-description": {"role": "neutral", "displayName": "Descripción clara de portada"},
+      "cover-hint": {"role": "neutral", "displayName": "Microcopy clara de portada"},
+      "instruction-bg": {"role": "neutral", "displayName": "Instrucción verde clara"},
+      "world-diagram-bg": {"role": "neutral", "displayName": "Superficie del diagrama"},
+      "world-ring-bg": {"role": "neutral", "displayName": "Base de anillo"},
+      "world-ring-text": {"role": "primary", "displayName": "Texto de anillo"},
+      "world-selected": {"role": "primary", "displayName": "Anillo exterior seleccionado"},
+      "world-focus": {"displayName": "Foco ocre de anillos"},
+      "world-outer": {"role": "neutral", "displayName": "Mundo"},
+      "world-society": {"role": "neutral", "displayName": "Sociedad"},
+      "world-others": {"role": "neutral", "displayName": "Los otros"},
+      "scope-example-bg": {"role": "neutral", "displayName": "Ejemplo de alcance"},
+      "dialogue-bg": {"role": "primary", "displayName": "Diálogo de escenario"},
+      "hint-text": {"role": "neutral", "displayName": "Control de pista"},
+      "hint-revealed": {"role": "secondary", "displayName": "Pista revelada"},
+      "simulator-hover": {"role": "neutral", "displayName": "Hover de opción"},
+      "simulator-feedback": {"role": "neutral", "displayName": "Feedback de intervención"},
+      "simulator-retry": {"role": "neutral", "displayName": "Feedback de revisión"},
+      "scenario-solved": {"role": "neutral", "displayName": "Caso conectado"},
+      "simulator-progress": {"role": "neutral", "displayName": "Contador de casos"},
+      "library-bg": {"role": "neutral", "displayName": "Biblioteca azul grisácea"},
+      "library-task-bg": {"role": "neutral", "displayName": "Tarea de exploración"}
+    },
+    "typographyMeta": {
+      "display": {"displayName": "Título de inicio", "purpose": "Valor base de escritorio; tamaños por breakpoint en DESIGN.md."},
+      "headline": {"displayName": "Título interior", "purpose": "Encabezados de las páginas del recorrido."},
+      "title": {"displayName": "Título de sección", "purpose": "h2 base; los componentes tienen ajustes locales."},
+      "body": {"displayName": "Lectura", "purpose": "Cuerpo base; 16px hasta 760px."},
+      "label": {"displayName": "Acción", "purpose": "Etiqueta de botón base."},
+      "interior-description": {"displayName": "Descripción interior", "purpose": "Texto paralelo al encabezado compacto, máximo 52ch."},
+      "hotspot": {"displayName": "Punto SEL", "purpose": "12px base, 11px hasta 1050px y 10px hasta 760px."},
+      "micro-choice": {"displayName": "Microelección", "purpose": "Opciones de SEL y de alcance; 13px y line-height 1.5."}
+    },
+    "fontLoading": {
+      "provider": "Google Fonts stylesheet",
+      "family": "Figtree",
+      "requestedWeights": [400, 450, 500, 550, 600, 650, 700, 750, 800],
+      "display": "swap",
+      "localFontFileObserved": false
+    },
+    "shadows": [
+      {"name": "primary-hover", "value": "0 5px 14px #173b5415", "purpose": "Hover del botón primario habilitado interior; no del CTA de portada."},
+      {"name": "scene-point", "value": "0 5px 14px #173b5430", "purpose": "Puntos interactivos superpuestos en la escena SEL."}
+    ],
+    "motion": [
+      {"name": "ease", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "--ease: entrada de página."},
+      {"name": "page-reveal", "value": ".35s", "purpose": "opacity .8 a 1; translateY 7px a 0."},
+      {"name": "button-transition", "value": "background .2s,color .2s,box-shadow .2s", "purpose": "Botones, incluido CTA de portada; easing CSS por defecto."},
+      {"name": "scene-point-transition", "value": "background .2s,transform .2s,border-color .2s", "purpose": "Hover translateY(-3px); easing CSS por defecto."},
+      {"name": "world-ring-transition", "value": "background .25s,border .25s,color .25s", "purpose": "Cambio de selección del anillo; easing CSS por defecto."},
+      {"name": "hotspot-focus", "value": ".5s cubic-bezier(.16,1,.3,1)", "purpose": "Halo del marcador seleccionado de 0 0 0 0 #173b5440 a 0 0 0 12px #173b5400; solo no-preference."},
+      {"name": "reveal-detail", "value": ".3s cubic-bezier(.16,1,.3,1)", "purpose": "Contenedores discovery-detail/world-detail: opacity .85 a 1 y translateY 5px a 0; solo no-preference."}
+    ],
+    "breakpoints": [
+      {"name": "wide", "value": "1500px", "query": "(min-width:1500px)"},
+      {"name": "compact-desktop", "value": "1359px", "query": "(max-width:1359px)"},
+      {"name": "tablet", "value": "1050px", "query": "(max-width:1050px)"},
+      {"name": "cover-stacked", "value": "900px", "query": "(max-width:900px)"},
+      {"name": "cover-tablet-fix", "value": "761px–900px", "query": "(min-width:761px) and (max-width:900px)"},
+      {"name": "mobile", "value": "760px", "query": "(max-width:760px)"},
+      {"name": "small-mobile", "value": "370px", "query": "(max-width:370px)"}
+    ],
+    "focus": {"selector": "button:focus-visible,a:focus-visible,summary:focus-visible", "outline": "3px solid var(--teal)", "outlineOffset": "5px", "coverButtonOverride": "outline-color:white", "scenePointOverride": "outline-color:white;outline-offset:3px", "worldRingOverride": "outline:3px solid #ac8100;outline-offset:4px", "hintOverride": "outline-color:var(--yellow)", "heading": "h1 de navegación y h3 de aprendizaje enfocados programáticamente sin contorno", "learningTitle": {"function": "focusLearningTitle", "tabindex": "-1", "focusPreventScroll": true, "scrollBlock": "start", "scrollBehavior": "smooth", "reducedMotionScrollBehavior": "instant", "scrollMarginTop": "24px", "targets": {"next-sel": "#sel-detail h3", "apply-case": "#case-task", "next-case": "#case-title", "restart-cases": "#case-title"}}, "caseNavigation": "Los botones se crean una vez y conservan su nodo DOM y foco; se actualizan aria-pressed, clases y contenido; case-announcement anuncia situación y etapa", "expandRing": "Enfoca el nuevo círculo con preventScroll:true", "skipLink": ".skip-link:not(:focus) position:absolute; foco visible conserva reglas base"},
+    "reducedMotion": {"query": "(prefers-reduced-motion:reduce)", "behavior": "html scroll-behavior:auto; animations and transitions disabled on elements and pseudoelements"},
+    "localSurfaces": {
+      "concentricRelationships": {"outer": "{colors.world-outer}", "society": "{colors.world-society}", "others": "{colors.world-others}", "self": "var(--ink)", "selectedOuter": "{colors.world-selected}", "selectedSelf": "var(--ink)", "purpose": "Cuatro círculos activos; no una rampa global."},
+      "skillNodes": [
+        {"name": "self", "background": "#e7f0ed", "border": "#b7cdc5"},
+        {"name": "decisions", "background": "#e4edf5", "border": "#b9cddd"},
+        {"name": "relationships", "background": "#f4efde", "border": "#d9cfac"},
+        {"name": "team", "background": "#edeaf1", "border": "#cfc7db"}
+      ]
+    },
+    "imageLayouts": {
+      "coverHero": {"selector": ".cover-hero", "position": "relative", "isolation": "isolate", "display": "flex", "alignItems": "center", "minHeight": "600px", "radius": "22px", "overflow": "hidden", "marginBottom": "32px", "homePaddingTop": "28px", "max1050": {"minHeight": "550px"}, "max900": {"display": "block", "minHeight": "0", "radius": "16px", "marginBottom": "26px", "homePaddingTop": "20px"}},
+      "coverCopy": {"selector": ".cover-copy", "padding": "56px", "width": "59%", "maxWidth": "720px", "h1": {"fontSize": "80px", "lineHeight": "1.04", "fontWeight": 750, "letterSpacing": "-.035em", "marginBottom": "25px"}, "subtitle": {"fontSize": "24px", "lineHeight": "1.4", "fontWeight": 500}, "description": {"fontSize": "16px", "lineHeight": "1.7", "maxWidth": "43ch"}, "max1050": {"padding": "38px", "width": "61%", "h1Size": "62px", "subtitleSize": "22px", "descriptionSize": "15px"}, "max900": {"position": "relative", "width": "100%", "maxWidth": "none", "padding": "30px 27px 300px", "h1Size": "52px", "h1LineHeight": "1.05", "subtitleSize": "20px", "descriptionSize": "15px", "descriptionLineHeight": "1.65", "descriptionMaxWidth": "38ch"}, "range761to900": {"padding": "38px 38px 370px", "descriptionMaxWidth": "55ch"}, "max370": {"padding": "27px 21px 260px", "h1Size": "43px", "subtitleSize": "18px", "descriptionSize": "14px"}},
+      "coverArt": {"selector": ".cover-art", "position": "absolute", "right": "0", "top": "0", "width": "72%", "height": "100%", "objectFit": "cover", "objectPosition": "right center", "zIndex": -2, "max1050": {"width": "75%"}, "max900": {"width": "100%", "height": "360px", "top": "auto", "bottom": "0", "objectFit": "cover", "objectPosition": "right bottom"}, "range761to900": {"height": "420px", "objectFit": "cover"}, "max370": {"height": "300px"}},
+      "coverShade": {"selector": ".cover-shade", "position": "absolute", "inset": "0", "zIndex": -1, "ariaHidden": true, "background": "linear-gradient(90deg,#102f43 0%,#102f43 24%,#102f43e6 36%,#102f4300 65%)", "max1050": "linear-gradient(90deg,#102f43 0%,#102f43 23%,#102f43eb 36%,#102f4300 72%)", "max900": "linear-gradient(180deg,#102f43 0%,#102f43 46%,#102f43f2 58%,#102f4300 75%)", "range761to900": "linear-gradient(180deg,#102f43 0%,#102f43 44%,#102f43f2 53%,#102f4300 68%)"},
+      "illustratedPrinciple": {"display": "grid", "columns": "1.15fr 1fr", "padding": "0", "gap": "0", "overflow": "hidden", "copyPadding": "30px 35px", "copyPaddingMax1050": "25px", "headingSizeMax1050": "24px", "mobileColumns": "1fr", "mobileCopyPadding": "25px 22px"},
+      "collaborationImage": {"display": "flex", "flexDirection": "column", "alignSelf": "stretch", "background": "#22465b", "imageFlex": "1", "imageMinHeight": "0", "declaredImageHeight": "265px", "heightNote": "La altura renderizada puede variar con el estiramiento y flex del bloque", "objectFit": "cover", "objectPosition": "50% 48%", "caption": {"fontSize": "12px", "lineHeight": "1.5", "color": "#d6e5ed", "padding": "10px 17px", "mobileFontSize": "11px", "mobilePadding": "11px 22px"}},
+      "mobileCollaborationImage": {"query": "(max-width:760px)", "height": "auto", "aspectRatio": "3/2", "objectFit": "contain", "scope": "Solo imagen ExC; no cover-art"},
+      "interaction": "Figuras informativas sin hover, foco ni animación propios"
+    },
+    "interiorLayouts": {
+      "heading": {"selector": ".page:not(.home) .page-heading", "columns": "1.15fr .85fr", "gap": "45px", "marginBottom": "36px", "titleSize": "42px", "descriptionSize": "16px", "descriptionLineHeight": "1.7", "descriptionMaxWidth": "52ch", "max1050": {"columns": "1.1fr .9fr", "gap": "25px", "titleSize": "35px"}, "max760": {"columns": "1fr", "gap": "18px", "marginBottom": "28px", "titleSize": "34px"}},
+      "sel": {"selector": ".sel-laboratory", "columns": "1.2fr .8fr", "minHeight": "480px", "radius": "18px", "border": "1px solid #c5d6d8", "image": {"width": "100%", "height": "100%", "minHeight": "450px", "flex": "1", "objectFit": "cover", "objectPosition": "center"}, "hotspotInset": "0 0 68px", "detailPadding": "30px", "detailTitleSize": "27px", "detailTitleLineHeight": "1.2", "pointPositions": {"identity": "top:13%;left:6%", "emotions": "top:16%;right:31%", "empathy": "top:40%;right:6%", "bonds": "top:43%;left:6%", "goals": "bottom:19%;left:31%", "decisions": "bottom:4%;right:5%"}, "max1050": {"columns": "1fr 1fr", "imageMinHeight": "480px", "detailPadding": "25px", "hotspotBottom": "85px", "pointPositions": {"identity": "top:13%;left:4%", "emotions": "top:17%;right:5%", "empathy": "top:54%;right:4%", "bonds": "top:43%;left:4%", "goals": "bottom:13%;left:6%", "decisions": "bottom:3%;right:4%"}}, "max760": {"columns": "1fr", "minHeight": "0", "imageMinHeight": "0", "imageHeight": "auto", "aspectRatio": "3/2", "objectFit": "contain", "hotspotBottom": "70px", "captionMinHeight": "70px", "captionFontSize": "10px", "pointMinHeight": "35px", "pointPadding": "5px 9px 5px 5px", "pointFontSize": "10px", "markerSize": "20px", "detailPadding": "24px 22px", "detailTitleSize": "25px", "pointPositions": {"identity": "top:6%;left:4%", "emotions": "top:7%;right:7%", "empathy": "top:40%;right:4%", "bonds": "top:42%;left:4%", "goals": "bottom:9%;left:13%", "decisions": "bottom:3%;right:5%"}}},
+      "world": {"selector": ".world-explorer", "columns": "1fr 1fr", "minHeight": "500px", "radius": "18px", "border": "1px solid #c7d9d5", "canvasWidth": "min(100%,430px)", "canvasAspectRatio": "1", "circleSizes": ["100%", "78%", "56%", "33%"], "circleCenter": "left:50%;top:50%;transform:translate(-50%,-50%)", "diagramPadding": "25px 27px 20px", "detailPadding": "32px", "detailTitleSize": "29px", "max1050": {"diagramPadding": "22px 20px", "detailPadding": "25px", "detailTitleSize": "26px", "ringFontSize": "12px", "selfFontSize": "22px", "diagramFooterDirection": "column"}, "max760": {"columns": "1fr", "canvasMaxWidth": "390px", "diagramPadding": "24px 18px 20px", "detailPadding": "24px 22px", "detailTitleSize": "26px", "selfFontSize": "21px", "diagramFooterDirection": "row"}},
+      "simulator": {"selector": ".simulator", "radius": "18px", "border": "1px solid #b9cfd5", "marginTop": "45px", "headingPadding": "28px 30px 22px", "navigationColumns": "repeat(4,1fr)", "navigationMinHeight": "49px", "workspaceColumns": ".9fr 1.1fr", "workspaceMinHeight": "510px", "imageHeight": "190px", "imageObjectFit": "cover", "imageObjectPosition": "center 42%", "narrativePadding": "25px 28px", "narrativeTitleSize": "26px", "decisionPadding": "30px", "decisionTitleSize": "24px", "optionMinHeight": "53px", "max1050": {"headingPadding": "25px", "narrativePadding": "24px", "narrativeTitleSize": "23px", "decisionPadding": "25px", "navigationFontSize": "12px"}, "max760": {"marginTop": "32px", "headingDirection": "column", "headingPadding": "24px 20px 20px", "navigationColumns": "1fr 1fr", "workspaceColumns": "1fr", "imageHeight": "auto", "imageAspectRatio": "2/1", "imageObjectFit": "cover", "narrativePadding": "24px 21px", "narrativeTitleSize": "25px", "decisionPadding": "25px 21px", "decisionTitleSize": "23px", "optionFontSize": "13px", "optionPadding": "13px 12px", "actionsDirection": "column", "actionButtonWidth": "100%"}},
+      "library": {"selector": ".resource-library", "radius": "14px", "border": "1px solid #b9cbd6", "summaryPadding": "23px 27px", "summaryFontSize": "17px", "bodyPadding": "25px 27px 22px", "filtersDisplay": "flex", "filtersWrap": "wrap", "filtersGap": "10px", "contentColumns": "1.2fr .8fr", "contentGap": "40px", "featureTitleSize": "28px", "footerDisplay": "block", "footerMarginTop": "50px", "max1050": {"contentGap": "25px"}, "max760": {"summaryPadding": "19px 18px", "summaryFontSize": "15px", "bodyPadding": "22px 18px", "filtersGap": "7px", "filterFontSize": "11px", "filterPadding": "9px 11px", "contentColumns": "1fr", "featureTitleSize": "25px", "openLabelDisplay": "none", "footerMarginTop": "30px", "signatureWrap": "wrap"}}
+    },
+    "interiorBorders": {"hotspot": "#c8d7dd", "selPanel": "#c5d6d8", "processDivider": "#b7cfca", "worldPanel": "#c7d9d5", "worldRing": "#a9c3b8", "worldOuter": "#b4cbd5", "simulator": "#b9cfd5", "hint": "#7895a8", "stageMarker": "#bdcbd0", "option": "#c7d6df", "optionSymbol": "#c2d3db", "feedback": "#c3d9cc", "retryFeedback": "#e7d1bd", "feedbackOutcome": "#c8dacf", "retryOutcome": "#e4cfc0", "library": "#b9cbd6", "libraryOpenDivider": "#cbd9e1", "libraryFilter": "#bfced7", "relatedDivider": "#bdcfd9", "creditsDivider": "#c5d5df"},
+    "interiorTextColors": {"sceneCaption": "#d5e5ed", "worldFooter": "#45665a", "scenarioBody": "#d6e5ed"},
+    "interactionModel": {
+      "sel": {"conceptCount": 6, "choicesPerConcept": 2, "initialConcept": "identidad", "initialExploredCount": 1, "selectedState": "aria-pressed and yellow background", "exploredState": "is-explored; plus marker becomes minus", "detailRegion": "#sel-detail aria-live polite", "feedbackRegion": "#sel-micro-feedback role status", "answerStore": "selAnswers Map; current visit only", "feedback": "Alternative-specific text, Conexión lograda / Vuelve a observar and retry color", "sequentialAction": "next-sel selects an unexplored concept or cycles after all six, then focuses detail h3"},
+      "world": {"relationCount": 4, "choicesPerRelation": 3, "initialRelation": "yo", "initialExploredCount": 1, "selectedState": "aria-pressed, outer rings deep green with white underlined label; self remains ink", "detailRegion": "#ring-detail aria-live polite", "feedbackRegion": "#ring-micro-feedback role status", "answerStore": "ringAnswers Map; current visit only", "expandOrder": ["yo", "otros", "sociedad", "mundo", "yo"], "expandFocus": "new circle preventScroll true"},
+      "simulator": {"caseCount": 4, "caseNames": ["Volver a intentarlo", "Cuidar una decisión", "Escuchar y acordar", "Construir juntos"], "stages": ["Reconoce", "Pon en práctica"], "recognitionChoices": 4, "interventionChoices": 3, "stableNavigationDOM": true, "navigationBehavior": "showCase updates existing navigation buttons, no replacement; selecting a case returns to skill stage", "announcement": "#case-announcement role status, aria-live polite, aria-atomic true", "hint": "aria-expanded and aria-controls, starts closed per case/stage", "skillReference": "Visible only during action stage, identifies current HSE", "feedback": "Each incorrect HSE gets a case-specific distinction; each intervention has a specific consequence; compare and retry allowed", "solvedWhen": "Recognition then intervention correct", "nextCase": "First unsolved case", "restartCases": "Clears solvedCases for practice; does not revoke already-persisted completed enfoque"},
+      "library": {"initialOpen": false, "initialFilter": "comprender", "filters": ["Comprender el SEL", "Llevarlo a mi aula", "Consultar referentes"], "panel": "#resource-panel aria-live polite", "content": "Description, exploration task, primary link and related resource", "targets": {"comprender": ["CASEL framework", "CASEL research"], "practica": ["sintesis-hse.pdf", "#compromiso"], "referentes": ["MEN", "#colombia"]}, "credits": "Independent details initially collapsed", "externalLinks": "new tab disclosed; noopener noreferrer", "downloads": "PDF download attribute"}
+    },
+    "progress": {"storageKey": "exc-brujula-hse-progress-v2", "persisted": "Only completed page IDs", "sessionOnly": ["exploredSEL", "exploredBenefits", "exploredLaws", "exploredRings", "exploredSkills", "solvedCases", "selAnswers", "ringAnswers", "manifesto choices"], "completion": {"evidencia": "6 SEL concepts explored + 4 benefits explored + evidence quiz correct", "colombia": "4 laws opened + 4 rings explored + law quiz correct", "enfoque": "4 skills explored + 4 cases solved through both stages", "compromiso": "belief + action + purpose selected"}, "microChoicesRequired": false, "navigationGated": false, "storageFailure": "Works for current visit", "globalReset": "Clears completed IDs and activity states/Maps; initial identity, academic benefit, self ring and self skill remain counted as explored", "responseSubmission": false},
+    "imageDisclosure": {"location": "Biblioteca: details.resource-credits, Sobre el contenido y las imágenes", "text": "Contenido adaptado de la guía «La Brújula de las HSE: Evidencia Internacional y Panorama Normativo Nacional» y del Diseño Instruccional de HSE de Enseña por Colombia. Los ejemplos, escenas, preguntas e intervenciones son adaptaciones pedagógicas, no situaciones documentales ni resultados de investigación. Las imágenes originales se generaron mediante OpenAI para este recurso."},
+    "assetProvenance": [
+      {
+        "path": "docs/excolombia.png",
+        "role": "Logo de Enseña por Colombia en cabecera",
+        "origin": "Archivo preexistente suministrado por el usuario",
+        "treatment": "Reutilizado por referencia en index.html; sin modificar ni re-encodear",
+        "htmlDimensions": {"width": 144, "height": 81},
+        "renderedCssWidth": {"base": "137px", "mobile": "108px"},
+        "renderedCssHeight": "auto",
+        "alt": "Enseña por Colombia",
+        "linkAccessibleName": "Enseña por Colombia, ir al inicio",
+        "scope": "Las dimensiones HTML son atributos declarados; no se afirma medición de dimensiones intrínsecas, autoría gráfica o licencia."
+      },
+      {
+        "path": "assets/aula-aprendizaje.webp",
+        "role": "Escena activa del laboratorio SEL y de tres situaciones del simulador",
+        "activeInIndex": true,
+        "includedInDist": true,
+        "statusSource": "Referencia activa en index.html y app.js; publicación registrada en README y comunicada por usuario",
+        "reusedWithoutNewGeneration": true,
+        "htmlDimensions": {"width": 1536, "height": 1024},
+        "loading": "lazy",
+        "decoding": "async",
+        "fetchpriority": "not explicitly set",
+        "alt": "Escena ilustrativa de una docente y cuatro estudiantes que aprenden juntos. Los puntos interactivos exploran seis propósitos del SEL.",
+        "simulatorStaticAlt": "Ilustración de aprendizaje compartido en el aula.",
+        "simulatorRuntimeAlt": "Escena ilustrativa de aprendizaje compartido entre una docente y sus estudiantes.",
+        "caption": "Una misma escena. Seis oportunidades para aprender.",
+        "origin": "Ilustración original generada mediante OpenAI para este RED",
+        "format": "WebP",
+        "model": "gpt-image-1.5",
+        "generationSize": "1536x1024",
+        "quality": "medium",
+        "createdAt": "2026-10-11T16:42:33.202Z",
+        "scene": "Ficticia, no fotografía de una comunidad real",
+        "style": "Editorial gouache con detalles de lápiz; azul profundo, verde petróleo y amarillo",
+        "promptSource": ".impeccable/image-prompts/aula-aprendizaje.json",
+        "embeddedPrompt": "Comunicado por el usuario; no se reinspeccionaron metadatos binarios en esta actualización",
+        "prompt": "Create a sophisticated editorial illustration for a Colombian teacher professional-learning resource. Landscape 3:2 composition, full-bleed, elegant contemporary hand-painted gouache with fine pencil contour details, tactile but clean, warm believable human expressions, natural body proportions and hands. Restrained palette: deep ink blue #173b54, petrol green #21685e, pale blue-gray #eaf2f4, touches of mustard yellow #fbc900, natural varied skin tones. Visually rich authored scene with thoughtfully layered composition and soft daylight, professional educational publishing quality, not childish clipart, not 3D, not a generic vector flat-design corporate illustration. No letters, words, labels, logos, UI, borders, or watermark. Fictional people, not a representation of an actual school. Depict a Colombian female teacher and four teenage students of diverse Afro-Colombian and mestizo backgrounds around a classroom table, all visible in a welcoming sunlit classroom. The teacher listens attentively while a student shares a notebook, other students show engaged curiosity and mutual encouragement. A small potted plant, window light and understated classroom shelving in background. The meaning is belonging, emotional trust and rigorous collaborative learning. Compose the five people naturally across the middle of the frame, retain their heads and gestures inside the central 80 percent so a wide crop stays readable. Navy and teal clothing with a single small yellow accent. Avoid literal flags or cultural stereotypes."
+      },
+      {
+        "path": "assets/portada-hse.webp",
+        "role": "Portada editorial conceptual final; cover-art",
+        "activeInIndex": true,
+        "origin": "Imagen original generada mediante OpenAI para este RED",
+        "format": "WebP",
+        "model": "gpt-image-1.5",
+        "generationSize": "1536x1024",
+        "quality": "medium",
+        "createdAt": "2026-10-11T16:54:04.204Z",
+        "htmlDimensions": {"width": 1536, "height": 1024},
+        "alt": "Composición conceptual: las páginas de un libro abierto se transforman en cintas entrelazadas que forman una brújula.",
+        "fetchpriority": "high",
+        "loading": "not explicitly set",
+        "decoding": "async",
+        "caption": null,
+        "scene": "Conceptual: libro abierto, cintas entrelazadas y brújula; sin personas",
+        "style": "Instalación editorial escultórica de papel plegado con iluminación de estudio, azul profundo, amarillo, jade y blanco",
+        "promptSource": ".impeccable/image-prompts/portada-hse.json",
+        "embeddedPrompt": "Comunicado por el usuario; no se reinspeccionaron metadatos binarios en esta actualización",
+        "prompt": "Create an extraordinary, polished contemporary editorial cover artwork for a professional educational digital resource about socioemotional skills, learning and collective leadership. Landscape 1536x1024. A seamless deep petrol navy blue studio background, approximately hex #102f43, with the LEFT 48 PERCENT completely empty clean navy negative space, no objects or details there: readable website text will be overlaid later. All of the sculptural subject belongs on the RIGHT HALF, around x=1100 y=500, with safe margins. A beautifully crafted, tactile, elegant off-white open book seen in three-quarter perspective, its pages transforming into three broad graceful interweaving sculptural ribbons that form an airy circular compass-like structure above the book. One ribbon is rich saturated golden yellow, one is muted jade teal, one is porcelain white. A small precise gold directional needle suspended at the center of the open circular structure suggests orientation and shared purpose. The ribbons must have refined folded-paper material with natural subtle texture, physically convincing light and soft shadows, not metallic, not shiny plastic, not inflated balloons. Sculptural editorial installation photographed at high-end studio quality. Confident bold silhouette, elegant unexpected composition, sophisticated education publishing art direction, no decorative confetti, no scattered floating trinkets, no spheres, no neon glow, no gradients as the main subject, no people. Quiet navy background all the way to every edge. Light is soft and directional from the upper right, giving the sculpture depth and readable pale highlights. Ground the book at the bottom-right with subtle cast shadow. No letters, symbols with words, text, UI, logos, border or watermark anywhere. This is a conceptual editorial image, not a diagram or a webpage screenshot."
+      },
+      {
+        "path": "assets/liderazgo-colectivo.webp",
+        "activeInIndex": true,
+        "role": "Ilustración del bloque ExC y del cuarto caso del simulador",
+        "simulatorRuntimeAlt": "Escena ilustrativa de estudiantes colaborando en un proyecto comunitario.",
+        "reusedWithoutNewGeneration": true,
+        "origin": "Ilustración original generada mediante OpenAI para este RED",
+        "format": "WebP",
+        "model": "gpt-image-1.5",
+        "generationSize": "1536x1024",
+        "quality": "medium",
+        "createdAt": "2026-10-11T16:42:51.747Z",
+        "htmlDimensions": {"width": 1536, "height": 1024},
+        "alt": "Ilustración de cuatro estudiantes que combinan sus aportes para construir una maqueta de un huerto comunitario.",
+        "fetchpriority": "not explicitly set",
+        "loading": "lazy",
+        "decoding": "async",
+        "caption": "Talentos distintos, un propósito compartido.",
+        "scene": "Ficticia, no fotografía de una comunidad real",
+        "style": "Editorial gouache con detalles de lápiz; azul profundo, verde petróleo y amarillo",
+        "promptSource": ".impeccable/image-prompts/liderazgo-colectivo.json",
+        "embeddedPrompt": "Comunicado por el usuario; no se reinspeccionaron metadatos binarios en esta actualización",
+        "prompt": "Create a sophisticated editorial illustration for a Colombian teacher professional-learning resource. Landscape 3:2 composition, full-bleed, elegant contemporary hand-painted gouache with fine pencil contour details, tactile but clean, warm believable human expressions, natural body proportions and hands. Restrained palette: deep ink blue #173b54, petrol green #21685e, pale blue-gray #eaf2f4, touches of mustard yellow #fbc900, natural varied skin tones. Visually rich authored scene with thoughtfully layered composition and soft daylight, professional educational publishing quality, not childish clipart, not 3D, not a generic vector flat-design corporate illustration. No letters, words, labels, logos, UI, borders, or watermark. Fictional people, not a representation of an actual school. Depict a close three-quarter overhead view of a shared classroom worktable with four teenage students collaboratively building a small community garden model from paper and cardboard. Diverse natural skin tones; part of the students' engaged faces and upper bodies visible near the top edges, their hands arranging miniature plants and paths at the center. One student holds a small sprout, another sketches simple non-text marks in a notebook, another contributes a cardboard piece. Carefully drawn anatomically sensible hands. The meaning is collective purpose, shared responsibility, respect for different contributions and bringing talents together. Rich calm teal and ink blue tones, light cool paper background, small mustard accent supplies. No readable writing on any object. Model should stay central and visible under a 16:9 crop."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Punto de exploración SEL", "kind": "button", "refersTo": "scene-point",
+      "description": "Control representativo del laboratorio; posición absoluta y datos de seis conceptos pertenecen al layout de la aplicación.",
+      "html": "<button class=\"ds-scene-point ds-explored\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-point-marker\" aria-hidden=\"true\"></span>Identidad</button>",
+      "css": ".ds-scene-point{display:inline-flex;align-items:center;gap:7px;background:white;color:var(--ink,#173b54);border:1px solid #c8d7dd;border-radius:25px;padding:8px 13px 8px 8px;font-family:Figtree,system-ui,sans-serif;font-size:12px;font-weight:700;line-height:1.6;min-height:40px;box-shadow:0 5px 14px #173b5430;cursor:pointer;transition:background .2s,transform .2s,border-color .2s}.ds-point-marker{width:22px;height:22px;border-radius:50%;background:var(--teal,#21685e);position:relative;flex-shrink:0}.ds-point-marker:before,.ds-point-marker:after{content:'';position:absolute;width:10px;height:1.5px;left:6px;top:10px;background:white}.ds-point-marker:after{transform:rotate(90deg)}.ds-scene-point[aria-pressed=true]{background:var(--yellow,#fbc900);border-color:var(--yellow,#fbc900)}.ds-scene-point[aria-pressed=true] .ds-point-marker{background:var(--ink,#173b54)}.ds-explored .ds-point-marker:after{transform:rotate(0)}.ds-scene-point:hover{transform:translateY(-3px)}.ds-scene-point:focus-visible{outline:3px solid white;outline-offset:3px}@media(max-width:1050px){.ds-scene-point{font-size:11px;padding:7px 10px 7px 7px}}@media(max-width:760px){.ds-scene-point{font-size:10px;min-height:35px;padding:5px 9px 5px 5px;gap:4px}.ds-point-marker{width:20px;height:20px}.ds-point-marker:before,.ds-point-marker:after{left:5px;top:9px}}@media(prefers-reduced-motion:reduce){.ds-scene-point{transition:none}}"
+    },
+    {
+      "name": "Círculos de alcance", "kind": "custom", "refersTo": "world-explorer",
+      "description": "Cuatro círculos concéntricos representativos; aria-pressed indica selección y los datos de preguntas se documentan en interactionModel.",
+      "html": "<div class=\"ds-concentric\" role=\"group\" aria-label=\"Explorar las cuatro relaciones del modelo concéntrico\"><button class=\"ds-ring ds-world\" type=\"button\" aria-label=\"Explorar Yo con el mundo\" aria-pressed=\"false\"><span>Mundo</span></button><button class=\"ds-ring ds-society\" type=\"button\" aria-label=\"Explorar Yo con la sociedad\" aria-pressed=\"false\"><span>Sociedad</span></button><button class=\"ds-ring ds-others\" type=\"button\" aria-label=\"Explorar Yo con los otros\" aria-pressed=\"false\"><span>Los otros</span></button><button class=\"ds-ring ds-self\" type=\"button\" aria-label=\"Explorar Yo conmigo mismo\" aria-pressed=\"true\"><span>Yo</span></button></div>",
+      "css": ".ds-concentric{position:relative;width:min(100%,430px);aspect-ratio:1;margin:0 auto}.ds-ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid #a9c3b8;display:flex;justify-content:center;align-items:start;padding-top:17px;background:#d9e8e0;color:#234f48;font-family:Figtree,system-ui,sans-serif;font-size:14px;font-weight:650;line-height:1.6;cursor:pointer;transition:background .25s,border .25s,color .25s}.ds-world{width:100%;height:100%;background:#dde9ef;border-color:#b4cbd5;padding-top:14px}.ds-society{width:78%;height:78%;background:#c8ddd1}.ds-others{width:56%;height:56%;background:#a6c7b5}.ds-self{width:33%;height:33%;background:var(--ink,#173b54);border-color:var(--ink,#173b54);color:white;align-items:center;padding:0;font-size:24px}.ds-self>span{font-weight:750}.ds-ring:hover{border-color:var(--teal,#21685e)}.ds-ring[aria-pressed=true]{background:#225f55;color:white;border-color:#225f55}.ds-ring[aria-pressed=true]>span{text-decoration:underline;text-underline-offset:5px}.ds-self[aria-pressed=true]{background:var(--ink,#173b54);border-color:var(--ink,#173b54)}.ds-ring:focus-visible{outline:3px solid #ac8100;outline-offset:4px}@media(max-width:1050px){.ds-ring{font-size:12px;padding-top:12px}.ds-world{padding-top:8px}.ds-self{font-size:22px;padding-top:0}}@media(max-width:760px){.ds-concentric{max-width:390px}.ds-ring{padding-top:11px}.ds-world{padding-top:8px}.ds-self{font-size:21px;padding-top:0}}@media(prefers-reduced-motion:reduce){.ds-ring{transition:none}}"
+    },
+    {
+      "name": "Decisión del simulador", "kind": "button", "refersTo": "simulator-option",
+      "description": "Opción de intervención representativa; estados correct/incorrect y feedback diferenciado controlados por app.js.",
+      "html": "<button class=\"ds-sim-option\" type=\"button\" aria-pressed=\"false\"><span class=\"ds-option-symbol\" aria-hidden=\"true\">A</span><span>Modelar una pausa, reconocer la emoción y ensayar otra estrategia.</span></button>",
+      "css": ".ds-sim-option{border:1px solid #c7d6df;border-radius:8px;display:flex;align-items:center;gap:13px;background:var(--paper,#f5f8fa);color:var(--ink,#173b54);padding:14px 16px;text-align:left;font-family:Figtree,system-ui,sans-serif;font-size:14px;line-height:1.5;min-height:53px;cursor:pointer}.ds-option-symbol{width:31px;height:31px;border:1px solid #c2d3db;border-radius:6px;display:grid;place-items:center;font-size:12px;flex-shrink:0;color:var(--teal,#21685e)}.ds-sim-option:hover{border-color:var(--teal,#21685e);background:#ecf3ef}.ds-sim-option.ds-correct{background:#e5f1e9;border-color:var(--teal,#21685e)}.ds-sim-option.ds-incorrect{background:#fcf1eb;border-color:#aa5940}.ds-sim-option:focus-visible{outline:3px solid var(--teal,#21685e);outline-offset:5px}@media(max-width:760px){.ds-sim-option{font-size:13px;padding:13px 12px;gap:10px}.ds-option-symbol{width:29px;height:29px}}"
+    },
+    {
+      "name": "Filtros de biblioteca", "kind": "custom", "refersTo": "resource-filter",
+      "description": "Tres propósitos con selección visible; el panel de recursos cambia mediante app.js.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Elegir recursos por propósito\"><button type=\"button\" aria-pressed=\"true\">Comprender el SEL</button><button type=\"button\" aria-pressed=\"false\">Llevarlo a mi aula</button><button type=\"button\" aria-pressed=\"false\">Consultar referentes</button></div>",
+      "css": ".ds-filters{display:flex;gap:10px;flex-wrap:wrap}.ds-filters button{background:white;color:var(--ink,#173b54);border:1px solid #bfced7;border-radius:6px;padding:10px 16px;font-family:Figtree,system-ui,sans-serif;font-size:13px;line-height:1.5;font-weight:600;cursor:pointer}.ds-filters button[aria-pressed=true]{background:var(--ink,#173b54);color:white;border-color:var(--ink,#173b54)}.ds-filters button:hover{border-color:var(--teal,#21685e)}.ds-filters button:focus-visible{outline:3px solid var(--teal,#21685e);outline-offset:5px}@media(max-width:760px){.ds-filters{gap:7px}.ds-filters button{font-size:11px;padding:9px 11px}}"
+    },
+    {
+      "name": "Botón primario", "kind": "button", "refersTo": "button-primary",
+      "description": "Acción de recorrido o descarga; estado disabled en el manifiesto incompleto.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Guardar mi manifiesto</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:15px;padding:14px 22px;min-height:51px;border-radius:8px;border:1px solid transparent;background:var(--ink,#173b54);color:white;font-family:Figtree,system-ui,sans-serif;font-size:15px;font-weight:650;line-height:1.6;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}.ds-primary:hover:not(:disabled){background:#245778;box-shadow:0 5px 14px #173b5415}.ds-primary:focus-visible{outline:3px solid var(--teal,#21685e);outline-offset:5px}.ds-primary:disabled{opacity:.55;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Botón secundario", "kind": "button", "refersTo": "button-secondary",
+      "description": "Acción secundaria blanca con borde.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Siguiente situación</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:15px;padding:14px 22px;min-height:51px;border-radius:8px;border:1px solid #bdcdd6;background:var(--white,#fff);color:var(--ink,#173b54);font-family:Figtree,system-ui,sans-serif;font-size:15px;font-weight:650;line-height:1.6;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}.ds-secondary:hover{background:var(--soft-blue,#e9f1f7)}.ds-secondary:focus-visible{outline:3px solid var(--teal,#21685e);outline-offset:5px}.ds-secondary:disabled{opacity:.55;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+    },
+    {
+      "name": "Navegación del recorrido", "kind": "nav",
+      "description": "Muestra página actual y avance; ejemplo estático de estados reales.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Recorrido del recurso\"><a href=\"#evidencia\" aria-current=\"page\"><span class=\"ds-dot ds-completed\"></span>Evidencia global</a><a href=\"#colombia\"><span class=\"ds-dot\"></span>Panorama colombiano</a></nav>",
+      "css": ".ds-nav{display:flex;gap:34px;overflow-x:auto;border-block:1px solid var(--line,#d8e2e8);background:var(--white,#fff);font-family:Figtree,system-ui,sans-serif}.ds-nav a{display:flex;align-items:center;gap:9px;white-space:nowrap;padding:19px 0;text-decoration:none;font-size:14px;font-weight:550;line-height:1.6;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--muted,#526877)}.ds-nav a:hover{color:var(--ink,#173b54)}.ds-nav a[aria-current=page]{color:var(--ink,#173b54);border-bottom-color:var(--yellow,#fbc900);font-weight:750}.ds-nav a:focus-visible{outline:3px solid var(--teal,#21685e);outline-offset:5px}.ds-dot{width:7px;height:7px;border:1px solid #879da9;border-radius:50%}.ds-completed{background:var(--teal,#21685e);border-color:var(--teal,#21685e)}@media(max-width:760px){.ds-nav{gap:24px}.ds-nav a{font-size:12px;padding-block:15px}}"
+    },
+    {
+      "name": "Etiqueta de habilidad", "kind": "chip", "refersTo": "skill-tag",
+      "description": "Etiqueta textual no interactiva; no tiene estados hover ni foco.",
+      "html": "<span class=\"ds-tag\">Autoconocimiento</span>",
+      "css": ".ds-tag{display:inline-block;font-family:Figtree,system-ui,sans-serif;font-size:12px;line-height:1.6;color:var(--ink,#173b54);background:var(--paper,#f5f8fa);border:1px solid var(--line,#d8e2e8);padding:4px 9px;border-radius:4px}"
+    },
+    {
+      "name": "Panel de habilidad", "kind": "card", "refersTo": "skill-detail",
+      "description": "Detalle blanco, sin sombra; la región de la aplicación recibe contenido dinámico.",
+      "html": "<div class=\"ds-detail\" aria-live=\"polite\"><h3>Liderazgo en sí mismo</h3><p>Reconocerse como agente de cambio y autorregularse para disponer el aula hacia un aprendizaje seguro y efectivo.</p></div>",
+      "css": ".ds-detail{background:var(--white,#fff);color:var(--ink,#173b54);border:1px solid var(--line,#d8e2e8);border-radius:var(--radius,16px);padding:30px;min-height:365px;font-family:Figtree,system-ui,sans-serif;line-height:1.6}.ds-detail h3{margin:0 0 20px;font-size:27px;font-weight:650;line-height:1.18;letter-spacing:-.015em;text-wrap:balance}.ds-detail p{margin:0 0 20px;font-size:16px}@media(max-width:760px){.ds-detail{padding:25px;min-height:310px}.ds-detail h3{font-size:25px}}"
+    },
+    {
+      "name": "Opción de compromiso", "kind": "button", "refersTo": "choice",
+      "description": "Elección por grupo; aria-pressed controla el estado visual en la aplicación.",
+      "html": "<button class=\"ds-choice\" type=\"button\" aria-pressed=\"true\">Modelar la regulación emocional frente a los desafíos.</button>",
+      "css": ".ds-choice{padding:17px 18px;border:1px solid var(--line,#d8e2e8);background:var(--white,#fff);color:var(--ink,#173b54);border-radius:9px;text-align:left;font-family:Figtree,system-ui,sans-serif;line-height:1.5;font-size:15px;min-height:99px;cursor:pointer}.ds-choice[aria-pressed=true]{background:var(--ink,#173b54);border-color:var(--ink,#173b54);color:white}.ds-choice:hover{border-color:var(--teal,#21685e)}.ds-choice:focus-visible{outline:3px solid var(--teal,#21685e);outline-offset:5px}@media(max-width:760px){.ds-choice{min-height:0;padding:15px 18px}}"
+    },
+    {
+      "name": "Respuesta de actividad", "kind": "button",
+      "description": "Ejemplo correcto; clases correct/incorrect y feedback textual provienen de JavaScript.",
+      "html": "<button class=\"ds-answer ds-correct\" type=\"button\" aria-pressed=\"true\">Las HSE crean condiciones para aprender y pueden fortalecer los logros académicos.</button>",
+      "css": ".ds-answer{position:relative;text-align:left;background:#fff;color:var(--ink,#173b54);border:1px solid #c7d6df;padding:15px 19px 15px 47px;border-radius:8px;font-family:Figtree,system-ui,sans-serif;font-size:16px;line-height:1.5;cursor:pointer;transition:background .2s,border .2s}.ds-answer:before{content:'';position:absolute;left:19px;top:21px;border:1px solid #839da9;width:13px;height:13px;border-radius:50%}.ds-answer:hover{border-color:var(--blue,#255978);background:#f6fafc}.ds-answer.ds-correct{border-color:var(--teal,#21685e);background:#e5f1e9}.ds-answer.ds-correct:before{background:var(--teal,#21685e);border-color:var(--teal,#21685e)}.ds-answer.ds-incorrect{border-color:#aa5940;background:#fcf1eb}.ds-answer.ds-incorrect:before{background:#aa5940;border-color:#aa5940}.ds-answer:focus-visible{outline:3px solid var(--teal,#21685e);outline-offset:5px}@media(max-width:760px){.ds-answer{font-size:14px;padding:14px 16px 14px 41px}.ds-answer:before{left:15px;top:19px}}@media(prefers-reduced-motion:reduce){.ds-answer{transition:none}}"
+    },
+    {
+      "name": "CTA de portada", "kind": "button", "refersTo": "button-cover",
+      "description": "Acción amarilla sobre la portada azul; enlace hacia evidencia.",
+      "html": "<a class=\"ds-cover-button\" href=\"#evidencia\">Comenzar a explorar</a>",
+      "css": ".ds-cover-button{display:inline-flex;align-items:center;justify-content:center;gap:15px;padding:15px 23px;min-height:51px;border-radius:8px;border:1px solid var(--yellow,#fbc900);background:var(--yellow,#fbc900);color:#102f43;text-decoration:none;font-family:Figtree,system-ui,sans-serif;font-size:15px;font-weight:650;line-height:1.6;transition:background .2s,color .2s,box-shadow .2s}.ds-cover-button:hover{background:#ffda3c;border-color:#ffda3c}.ds-cover-button:focus-visible{outline:3px solid white;outline-offset:5px}@media(max-width:900px){.ds-cover-button{font-size:14px;gap:14px;padding:14px 18px}}@media(max-width:370px){.ds-cover-button{font-size:13px;gap:10px;padding:13px 15px}}@media(prefers-reduced-motion:reduce){.ds-cover-button{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Atlas de aprendizaje",
+    "overview": "El sistema combina una portada editorial conceptual con un atlas pedagógico interior. Mantiene Figtree y la identidad azul, verde petróleo y amarillo ExC; el inicio ahora usa fondo azul profundo, texto blanco, HSE y CTA amarillos, con una composición de libro, brújula y cintas.\n\nLa jerarquía combina títulos grandes, texto de apoyo moderado y bloques delimitados por líneas finas o fondos tonales. Los esquemas interiores de relaciones y habilidades mantienen el lenguaje de atlas; las actividades conservan controles explícitos y retroalimentación textual. La portada conceptual reemplaza el mapa interactivo inicial.\n\nLa imagen conceptual de portada tiene materialidad de papel plegado e iluminación de estudio, sin personas. Las escenas ficticias de aula y colaboración conservan su lenguaje editorial gouache: el aula se reutiliza ahora como soporte de seis puntos SEL y de tres situaciones del simulador; la colaboración acompaña ExC y el cuarto caso. Los controles son HTML/CSS/SVG funcionales, no parte del raster. No hubo generación nueva de imágenes.",
+    "keyCharacteristics": [
+      "Figtree como única familia tipográfica, con respaldo del sistema.",
+      "Tinta azul para lectura y selección; verde petróleo para énfasis y conexiones.",
+      "Amarillo ExC en HSE, CTA de portada, detalles y navegación actual.",
+      "Líneas cartográficas, círculos y paneles tonales con esquinas suaves.",
+      "Selecciones explícitas y retroalimentación explicativa.",
+      "Portada conceptual y escenas de aula y colaboración originales, reutilizadas con procedencia y disclosure.",
+      "Exploración por puntos, círculos, decisiones en dos etapas y biblioteca por propósito."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** conservar Figtree, la pila de respaldo y los roles cromáticos existentes.",
+      "**Do** mantener texto explicativo junto a estados de respuesta y progreso.",
+      "**Do** conservar foco visible, nombres accesibles y reducción de movimiento al extender componentes.",
+      "**Do** respetar los breakpoints y las posiciones finales de la cascada móvil.",
+      "**Do** reutilizar el logo preexistente `docs/excolombia.png`, suministrado por el usuario, como archivo de identidad de Enseña por Colombia.",
+      "**Do** conservar los textos alternativos, los pies y el disclosure de escenas ficticias junto a la procedencia de las ilustraciones."
+    ],
+    "donts": [
+      "**Don't** modificar, regenerar ni re-encodear el logo suministrado.",
+      "**Don't** introducir inputs o textareas para las actividades: el sistema construido usa botones de elección.",
+      "**Don't** confundir el guardado del avance con persistencia de elecciones o envío de respuestas.",
+      "**Don't** presentar colores locales o rampas sintetizadas como tokens implementados.",
+      "**Don't** convertir esta documentación de código en claims de validación visual, accesibilidad certificada o rendimiento medido.",
+      "**Don't** presentar las ilustraciones generadas como fotografías de una comunidad educativa real."
+    ]
+  }
+}
