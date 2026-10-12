@@ -1,0 +1,7 @@
+{
+  "name": "la-brujula-de-las-hse",
+  "compatibility_date": "2026-10-12",
+  "assets": {
+    "directory": "./dist"
+  }
+}

@@ -47,6 +47,34 @@ El build copia únicamente HTML, CSS, JavaScript, favicon, logo y PDF. `.env`, l
 
 Para el servicio gratuito de GitHub Pages, utiliza un repositorio público si tu plan no permite Pages en repositorios privados. El recurso no necesita secretos de Actions ni una clave OpenAI.
 
+## Publicar en Cloudflare Workers (Static Assets)
+
+Si la integración de Git muestra un **Deploy command** con Wrangler, estás usando Workers Builds. El archivo `wrangler.json` configura `assets.directory` como **`./dist`**. Es un sitio completamente estático: no necesita un script Worker ni bindings.
+
+En **Workers & Pages → tu Worker → Settings → Build**, configura:
+
+| Configuración | Valor |
+| --- | --- |
+| Rama de producción | `main` |
+| Comando de build | `npm run build` |
+| Comando de deploy | `npx wrangler deploy --assets ./dist` |
+| Directorio raíz | Raíz del repositorio |
+| Variable de build | `NODE_VERSION=22` |
+| Nombre del Worker | `la-brujula-de-las-hse`, igual al campo `name` de `wrangler.json` |
+
+Si el Worker ya tiene otro nombre, ajusta `name` en `wrangler.json` para que coincida con el nombre mostrado en Cloudflare. Después, vuelve a ejecutar el despliegue.
+
+El comando de deploy no debe contener `--assets .` ni apuntar a la raíz del repositorio. Eso incluiría `node_modules` y archivos de trabajo, en lugar del sitio generado. Cloudflare admite archivos estáticos de hasta 25 MiB; el binario de `workerd` pertenece a la herramienta de despliegue y no debe subirse como un asset.
+
+Para publicar desde una máquina autenticada con Cloudflare:
+
+```sh
+npm run build
+npx wrangler deploy --assets ./dist
+```
+
+Solo se sube el contenido de `dist/`, que el build genera mediante una lista explícita de archivos públicos. `.env`, `node_modules`, scripts, prompts y documentos internos quedan fuera de ese directorio.
+
 ## Publicar en Cloudflare Pages
 
 Conecta el repositorio desde **Workers & Pages → Create application → Pages → Connect to Git** y usa:
